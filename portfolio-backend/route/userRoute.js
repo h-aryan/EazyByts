@@ -4,6 +4,7 @@ const userController = require("../controller/userController");
 
 router.route("/register").post(userController.register);
 router.route("/login").post(userController.login);
+router.get("/logout", userController.logout);
 
 router.use(userController.protect); // Protect all routes after this middleware
 router.route("/updatePassword").patch(userController.updatePassword);

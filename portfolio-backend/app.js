@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
 const userRoutes = require("../portfolio-backend/route/userRoute");
+const userRoutes = require("./routes/userRoute");
+app.use("/api/user", userRoutes);
 
 const app = express();
 
