@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json()); // Parse JSON bodies
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://github.com/h-aryan/EazyByts",
+  "https://internship-me.netlify.app",
 ];
 
 app.use(
