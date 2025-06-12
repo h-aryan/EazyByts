@@ -10,7 +10,7 @@ function Register() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "https://eazybyts-vgrb.onrender.com/api/user/login",
+        "https://eazybyts-vgrb.onrender.com/api/user/register",
         {
           name,
           email,
