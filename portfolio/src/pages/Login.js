@@ -8,10 +8,13 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3000/api/user/login", {
-        email,
-        password,
-      });
+      const res = await axios.post(
+        "https://eazybyts-vgrb.onrender.com/api/user/login",
+        {
+          email,
+          password,
+        }
+      );
       localStorage.setItem("token", res.data.token);
       alert("Login successful");
     } catch (err) {

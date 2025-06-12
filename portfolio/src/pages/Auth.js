@@ -30,7 +30,7 @@ function Auth() {
 
     try {
       const res = await axios.post(
-        `http://localhost:3000/api/user${endpoint}`,
+        `https://eazybyts-vgrb.onrender.com/api/user/${endpoint}`,
         payload
       );
       localStorage.setItem("token", res.data.token);

@@ -9,11 +9,14 @@ function Register() {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3000/api/user/register", {
-        name,
-        email,
-        password,
-      });
+      const res = await axios.post(
+        "https://eazybyts-vgrb.onrender.com/api/user/login",
+        {
+          name,
+          email,
+          password,
+        }
+      );
       localStorage.setItem("token", res.data.token);
       alert("Registered successfully");
       // Redirect user if needed
