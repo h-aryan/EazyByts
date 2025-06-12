@@ -7,8 +7,12 @@ const app = express();
 
 app.use(express.json()); // Parse JSON bodies
 app.use(
-  cors({ origin: "https://your-frontend.netlify.app", credentials: true })
+  cors({
+    origin: "http://localhost:3000", // or 3000, whichever port you're using for React
+    credentials: true,
+  })
 );
+
 app.use(morgan("dev"));
 app.use("/api/user", userRoutes);
 
